@@ -1,12 +1,10 @@
 import React from 'react';
 
 function App() {
-  return (
-    <div className="App">
-     <h1>hello worlsd</h1>
-    </div>
-  );
-}
+  const greeting = "hi lisa"
+  const dom = <h1>{greeting}</h1>
+  return dom;
+  }
 
 export default App;
 
