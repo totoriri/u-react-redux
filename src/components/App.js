@@ -7,7 +7,7 @@ import { increment, decrement } from "../actions"
 class App extends React.Component{
   render() {
     const props = this.props
-    console.log("reander")
+    console.log("render")
     return (
       <React.Fragment>
         <div>value:{props.value} </div>
