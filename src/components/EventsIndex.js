@@ -1,10 +1,15 @@
 import React from 'react';
 import { connect } from "react-redux"
 
-import { increment, decrement } from "../actions"
+import { readEvents } from "../actions"
 
   
-class App extends React.Component{
+class EventsIndex extends React.Component{
+  componentDidMount() {
+    console.log("hi!")
+    this.props.readEvents()
+  }
+  
   render() {
     const props = this.props
     console.log("render")
@@ -19,10 +24,7 @@ class App extends React.Component{
 }
 
 const mapStateToProps = state => ({ value: state.count.value })
-const mapDispatchToProps = dispatch => ({
-  increment: () => dispatch(increment()),
-  decrement:()=> dispatch(decrement())
-})
-export default connect(mapStateToProps,mapDispatchToProps)(App)
+const mapDispatchToProps = dispatch => ({readEvents})
+export default connect(mapStateToProps,mapDispatchToProps)(EventsIndex)
 
 
