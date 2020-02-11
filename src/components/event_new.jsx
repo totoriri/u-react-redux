@@ -1,9 +1,21 @@
-import React from "react"
+import React from 'react';
+import { connect } from "react-redux"
+import {Link} from "react-router-dom"
 
-const EventNew = () => {
+// import { postEvents } from "../actions"
+
+  
+class EventsNew extends React.Component{
+  render() {
     return (
-        <div>heeiiiii,new events!!</div>
+      <React.Fragment>
+      <div>foo</div>
+       </React.Fragment>
     )
+   }
 }
 
-export default EventNew;
+// const mapDispatchToProps = ({postEvents})
+export default connect(null,null)(EventsNew)
+
+
