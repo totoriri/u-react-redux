@@ -19,7 +19,7 @@ ReactDOM.render(
         <BrowserRouter>
             <Switch>
                 <Route exact path="/events/new" component={EventNew} />
-                <Route excat path="/events" component={EventsIndex} />
+                <Route excat path="/" component={EventsIndex} />
             </Switch>
         </BrowserRouter>
     </Provider>

@@ -23,8 +23,7 @@ class EventsIndex extends React.Component{
 
 
   render() {
-    const props = this.props
-    console.log("render")
+    
     return (
       <React.Fragment>
       <table>
