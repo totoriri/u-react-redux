@@ -13,15 +13,22 @@ class EventsNew extends React.Component{
   }
   render() {
     return (
-      <React.Fragment>
-        <Field labe="Title" name="title" type="text" component={this.renderField} />
-        <Field labe="Title" name="title" type="text" component={this.renderField} />
-       </React.Fragment>
+      <form>
+        <div><Field labe="Title" name="title" type="text" component={this.renderField} /></div>
+        <div><Field labe="Title" name="title" type="text" component={this.renderField} /></div>
+
+        <div>
+          <input type="submit" value="submit" disabled={false}/>
+          <Link to="/">Cancel</Link>
+        </div>
+       </form>
     )
    }
 }
 
 // const mapDispatchToProps = ({postEvents})
-export default connect(null,null)(EventsNew)
+export default connect(null, null)(
+  reduxForm({})
+)(EventsNew)
 
 
